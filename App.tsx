@@ -1,20 +1,14 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { UnistylesTheme } from "react-native-unistyles"
+import { StatusBar } from "expo-status-bar"
+
+import { theme } from "./src/lib/theme"
+import { Home } from "./src/screens/Home"
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+    <UnistylesTheme theme={theme}>
+      <StatusBar style="light" backgroundColor="transparent" translucent />
+      <Home />
+    </UnistylesTheme>
+  )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
