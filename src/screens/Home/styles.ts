@@ -7,17 +7,33 @@ export const stylesheet = createStyleSheet((theme) => ({
   },
   header: {
     width: "100%",
-    height: 184,
+    height: {
+      xs: 184,
+      sm: 184,
+      md: 284
+    },
     alignItems: "center",
-    backgroundColor: theme.colors.primary,
+    backgroundColor: {
+      ':w[200,500]': theme.colors.primary,
+      ':w[500,900]': theme.colors.shape,
+    },
   },
   img: {
-    height: 250,
+    height: {
+      xs: 232,
+      sm: 232,
+      md: 332
+    },
+    width: {
+      xs: 140,
+      sm: 140,
+      md: 240
+    }
   },
   content: {
     flex: 1,
     marginTop: 72,
-    padding: 24,
+    padding: 32,
     width: "100%",
     alignItems: "center",
   },
